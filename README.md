@@ -135,7 +135,16 @@ python train.py
 ### 4. Run the Flask App
 
 ```bash
-python app.py
+cd frontend
+npm run dev
+```
+
+```bash
+python backend/app.py
+```
+
+```bash
+Note: if app.py is throwing some error, first install requirements.txt inside the virtual environment. Then try running python again.
 ```
 
 ### 5. Visit the Web App
@@ -143,7 +152,9 @@ python app.py
 Open your browser and navigate to:
 
 ```
+
 http://127.0.0.1:5000
+
 ```
 
 ---
@@ -185,8 +196,8 @@ We strictly adhere to:
 
 ## 👨‍💻 Contributors
 
-- **Rahul Yadav** – AI/ML Developer  
-  📧 [rahulyyadav21@gmail.com](mailto:rahulyyadav21@gmail.com)  
+- **Rahul Yadav** – AI/ML Developer
+  📧 [rahulyyadav21@gmail.com](mailto:rahulyyadav21@gmail.com)
   🌐 [https://rahul-yadav.com.np/](https://https://rahul-yadav.com.np/)
 
 - **Ayush M Singh** - Frontend Developer
@@ -201,3 +212,7 @@ Contributions are welcome! Feel free to fork this repo and open a pull request.
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
+
+```
+
+```
