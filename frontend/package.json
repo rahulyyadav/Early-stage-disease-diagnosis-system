@@ -11,8 +11,12 @@
     "preview": "vite preview"
   },
   "overrides": {
+    "axios": "1.10.0",
     "esbuild": "0.25.0",
-    "axios": "1.10.0"
+    "lovable-tagger/axios": "1.10.0"
+  },
+  "resolutions": {
+    "lovable-tagger/axios": "1.10.0"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
