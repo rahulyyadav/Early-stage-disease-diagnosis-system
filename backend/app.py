@@ -2,21 +2,26 @@
 import numpy as np
 import os
 from flask import Flask, request, jsonify
-from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.inception_v3 import preprocess_input
 from flask_cors import CORS
 import logging
 import io
+import tensorflow as tf
 
 app = Flask(__name__)
 CORS(app)  # Allow all origins for development
 
 logging.basicConfig(level=logging.INFO)
 
-# Load model once
-MODEL_PATH = os.path.join(os.path.dirname(__file__), 'vgg-16-nail-disease.h5')
-model = load_model(MODEL_PATH)
+# Load TFLite model once
+TFLITE_MODEL_PATH = os.path.join(os.path.dirname(__file__), 'model_quantized.tflite')
+interpreter = tf.lite.Interpreter(model_path=TFLITE_MODEL_PATH)
+interpreter.allocate_tensors()
+
+# Get input and output details
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
 
 # Class labels
 CLASS_NAMES = [
@@ -44,7 +49,11 @@ def predict():
         x = image.img_to_array(img)
         x = np.expand_dims(x, axis=0)
         x = preprocess_input(x)
-        preds = model.predict(x)
+        # Ensure input type matches TFLite model
+        x = x.astype(input_details[0]['dtype'])
+        interpreter.set_tensor(input_details[0]['index'], x)
+        interpreter.invoke()
+        preds = interpreter.get_tensor(output_details[0]['index'])
         pred_idx = np.argmax(preds, axis=1)[0]
         pred_class = CLASS_NAMES[pred_idx]
         logging.info(f"Prediction successful: {pred_class}")
