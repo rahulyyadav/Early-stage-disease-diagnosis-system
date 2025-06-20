@@ -5,7 +5,7 @@ venv/
 env/
 
 # Ignore large model and binary files
-*.h5
+
 *.dylib
 *.so
 *.ckpt
