@@ -7,16 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
-    "lint": "echo 'Linting skipped.'",
+    "lint": "eslint .",
     "preview": "vite preview"
-  },
-  "eslintConfig": {
-    "root": true,
-    "rules": {
-      "no-unused-vars": "off",
-      "no-undef": "off",
-      "@typescript-eslint/no-unused-vars": "off"
-    }
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
