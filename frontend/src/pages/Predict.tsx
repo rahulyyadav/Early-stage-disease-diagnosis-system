@@ -64,7 +64,7 @@ const Predict = () => {
     try {
       console.log("Sending request to backend...");
       const response = await axios.post(
-        "http://localhost:8000/predict",
+        "https://early-disease-prediction-on-human-nails.onrender.com/predict",
         formData,
         {
           headers: {
