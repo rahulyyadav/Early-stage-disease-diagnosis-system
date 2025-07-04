@@ -12,6 +12,10 @@ Designed for both clinical support and individual use, this solution combines me
 
 ---
 
+🎥 [Click here to watch the demo video](https://youtu.be/k71xUDj2Efo)
+
+---
+
 ## 🎯 Problem Statement
 
 Millions delay medical diagnosis due to cost, distance, or fear of invasive tests. Fingernails are biomarkers that can reflect various internal conditions — yet this potential remains underutilized. Our system uses nail image processing to bridge this gap and provide early warnings — all from a smartphone image.
