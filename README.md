@@ -202,7 +202,7 @@ We strictly adhere to:
 
 - **Rahul Yadav** – AI/ML Developer
   📧 [rahulyyadav21@gmail.com](mailto:rahulyyadav21@gmail.com)
-  🌐 [https://rahul-yadav.com.np/](https://https://rahul-yadav.com.np/)
+  🌐 [https://rahul-yadav.com.np/](https://rahul-yadav.com.np/)
 
 - **Ayush M Singh** - Frontend Developer
   📧 [ayush.msingh2023@vitstudent.ac.in](mailto:ayush.msingh2023@vitstudent.ac.in)
